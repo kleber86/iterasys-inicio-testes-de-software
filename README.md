@@ -11,18 +11,18 @@
 - [x] Quem é o José Correia	
 - [x] A carreira em Teste e QA
 - [x] Por que o próprio Dev não testa?
-- [ ] Habilidades Pessoais do Testador/QA
-- [ ] Trabalho em Equipe
-- [ ] Hard Skills
-- [ ] Débito Técnico
-- [ ] Como Vai Funcionar Este Curso
-- [ ] Os Diferentes Objetivos deste Curso
-- [ ] Como Estudar e Progredir
-- [ ] Apresente-se
-- [ ] Conecte-se
-- [ ] Comprometa-se
-- [ ] Quem é o patrocinador desta 1ª turma
-- [ ] Um Mapa para o Futuro
+- [x] Habilidades Pessoais do Testador/QA
+- [x] Trabalho em Equipe
+- [x] Hard Skills
+- [x] Débito Técnico
+- [x] Como Vai Funcionar Este Curso
+- [x] Os Diferentes Objetivos deste Curso
+- [x] Como Estudar e Progredir
+- [x] Apresente-se
+- [x] Conecte-se
+- [x] Comprometa-se
+- [x] Quem é o patrocinador desta 1ª turma
+- [x] Um Mapa para o Futuro
 - [ ] Questionário de Diagnóstico Inicial
 - [ ] Simulado da Avaliação do Módulo
 - [ ] Avaliação do Módulo 1: Apresentação do Curso
