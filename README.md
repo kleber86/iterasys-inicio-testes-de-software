@@ -23,9 +23,15 @@
 - [x] Comprometa-se
 - [x] Quem é o patrocinador desta 1ª turma
 - [x] Um Mapa para o Futuro
-- [ ] Questionário de Diagnóstico Inicial
-- [ ] Simulado da Avaliação do Módulo
-- [ ] Avaliação do Módulo 1: Apresentação do Curso
+- [x] Questionário de Diagnóstico Inicial
+- [x] Simulado da Avaliação do Módulo
+- [x] Avaliação do Módulo 1: Apresentação do Curso
 
 <hr>
 
+<h3>2. Introdução ao Teste de Software</h3>
+
+- [x] Uma Breve História do TesteQuem é a Iterasys
+- [x] Importância do Teste X Danos dos Bugs
+- [x] Os 7 Fundamentos do Teste (ISTQB)
+- [x] Teste Exaustivo Não É Possível
