@@ -35,3 +35,8 @@
 - [x] Importância do Teste X Danos dos Bugs
 - [x] Os 7 Fundamentos do Teste (ISTQB)
 - [x] Teste Exaustivo Não É Possível
+- [x] Agrupamento de Defeitos
+- [x] Paradoxo do Pesticida
+- [x] Teste Depende de Contexto
+- [x] A Ilusão da Ausência de Erros
+- [x] Diferença entre Teste e QA
