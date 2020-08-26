@@ -24,19 +24,79 @@
 - [x] Quem é o patrocinador desta 1ª turma
 - [x] Um Mapa para o Futuro
 - [x] Questionário de Diagnóstico Inicial
-- [x] Simulado da Avaliação do Módulo
-- [x] Avaliação do Módulo 1: Apresentação do Curso
+
 
 <hr>
 
 <h3>2. Introdução ao Teste de Software</h3>
 
-- [x] Uma Breve História do TesteQuem é a Iterasys
+- [x] Uma Breve História do Teste
 - [x] Importância do Teste X Danos dos Bugs
 - [x] Os 7 Fundamentos do Teste (ISTQB)
+- [x] Teste Demonstra a Presença de Defeitos, Mas Nunca a Sua Ausência
 - [x] Teste Exaustivo Não É Possível
+- [x] Teste Antecipado
 - [x] Agrupamento de Defeitos
 - [x] Paradoxo do Pesticida
 - [x] Teste Depende de Contexto
 - [x] A Ilusão da Ausência de Erros
 - [x] Diferença entre Teste e QA
+- [x] Erro, Ocorrência, Defeito e Falha
+- [x] Tipos de Testes Baseados na IEC/ISO 25010
+- [x] IEC/ISO 25010 - Adequação Funcional
+- [x] IEC/ISO 25010 - Usabilidade
+- [x] IEC/ISO 25010 - Compatibilidade
+- [x] IEC/ISO 25010 - Confiança
+- [x] IEC/ISO 25010 - Eficiência no Desempenho
+- [x] IEC/ISO 25010 - Manutenibilidade
+- [x] IEC/ISO 25010 - Portabilidade
+- [x] IEC/ISO 25010 - Segurança
+- [x] Testes Manuais X Testes Automatizados
+- [x] Testes Tradicionais X Testes Ágeis
+- [x] QArentena 18 - Os Piores Bugs da História
+
+<hr>
+
+<h3>3. Atitudes de um Profissional da Qualidade</h3>
+
+- [x] [Live 01] O Mindset Correto
+- [x] [Live 02] Valores e Princípios Ágeis
+- [x] [QArentena 16] Scrum - com Fernando Ruano
+- [x] Pressão Organizacional
+- [x] Comprometido X Envolvido
+- [x] Autogerenciamento
+- [x] Comunicação Verbal e Não Verbal
+- [x] Negociação (Ganha-Ganha)
+- [x] Produtividade - Parte 1
+- [x] Produtividade - Parte 2
+- [x] Fluxo Contínuo - Parte 1
+- [x] Fluxo Contínuo - Parte 2
+- [x] Técnica Pomodoro
+
+<hr>
+
+<h3>4. Planejamento de Testes</h3>
+
+- [x] [Live 03] Planejamento de Testes
+- [x] Negociando um acordo flexível e de valor
+- [x] Plano de Teste
+- [x] Mapa Mental como alternativa no planejamento
+- [x] Requisitos Funcionais e Não Funcionais
+- [x] Estórias dos Usuários
+- [x] Pre-Game
+- [x] Product Backlog
+- [x] Sprint
+- [x] Sprint Backlog
+- [x] Épicos
+- [x] Features
+- [x] Análise de Riscos
+- [x] Matriz de Risco
+- [x] Os Riscos Estão Vivos - Comercial Allianz Seguros: Probabilidades
+- [x] Planning Poker
+- [x] Histórico dos Riscos
+- [x] Análise de Pareto
+- [x] Priorização por Impulso
+- [x] Priorização por Atração
+- [x] Análise da Cauda Longa
+- [x] Exemplo de Uso de Pairwise na Cauda Longa (PICT Online)
+
