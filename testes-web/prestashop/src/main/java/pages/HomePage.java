@@ -21,6 +21,8 @@ public class HomePage {
 	private By textoProdutosNoCarrinho = By.className("cart-products-count");
 	private By descricosDosProdutos = By.cssSelector(".product-description a");
 	private By precoDosProdutos = By.cssSelector(".product-price-and-shipping .price");
+	private By botaoSignIn = By.cssSelector(".user-info span");
+	private By usuarioLogado = By.cssSelector(".account span");
 	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -57,6 +59,15 @@ public class HomePage {
 	public ProdutoPage clicarProduto(int indice) {
 		driver.findElements(descricosDosProdutos).get(indice).click();
 		return new ProdutoPage(driver);
+	}
+	
+	public LoginPage clicarBotaoSignIn() {
+		driver.findElement(botaoSignIn).click();
+		return new LoginPage(driver);
+	}
+	
+	public boolean estaLogado(String texto) {
+		return texto.contentEquals(driver.findElement(usuarioLogado).getText());
 	}
 	
 
