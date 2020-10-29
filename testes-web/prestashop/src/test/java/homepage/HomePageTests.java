@@ -3,6 +3,8 @@ package homepage;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 import base.BaseTests;
@@ -12,6 +14,9 @@ import pages.ProdutoPage;
 
 public class HomePageTests extends BaseTests{
 
+	LoginPage loginPage;
+	ProdutoPage produtoPage;
+	
 	
 	@Test
 	public void testContarProdutos_oitoProdutosDiferentes() {
@@ -31,7 +36,7 @@ public class HomePageTests extends BaseTests{
 		String nomeProduto_HomePage = homePage.obterNomeProduto(indice);
 		String precoProduto_HomePage = homePage.obterPrecoProduto(indice);
 		
-		ProdutoPage produtoPage = homePage.clicarProduto(indice);
+		produtoPage = homePage.clicarProduto(indice);
 		
 		String nomeProduto_ProdutoPage = produtoPage.obterNomeProduto();
 		String precoProduto_ProdutoPage = produtoPage.obterPrecoProduto();
@@ -40,10 +45,12 @@ public class HomePageTests extends BaseTests{
 		assertThat(precoProduto_HomePage, is(precoProduto_ProdutoPage));
 	}
 	
+	
+	
 	@Test
 	public void testLoginComSucesso_UsuarioLogado() {
 		// Clicar no botão Sign in na home page
-		LoginPage loginPage = homePage.clicarBotaoSignIn();
+		loginPage = homePage.clicarBotaoSignIn();
 		
 		// Preencher usuario e senha
 		loginPage.preencherEmail("klebernascimento@outlook.com.br");
@@ -63,6 +70,20 @@ public class HomePageTests extends BaseTests{
 		testLoginComSucesso_UsuarioLogado();
 
 		testValidarDetalhesDoProduto_DescricaoEValorIguais();
+		
+		List<String> listaOpcoes = produtoPage.obterOpcoesSelecionadas();
+		
+		System.out.println(listaOpcoes.get(0));
+		System.out.println("Tamanho da Lista: " + listaOpcoes.size());
+		
+		produtoPage.selecionarOpcaoDropDown("M");
+		listaOpcoes = produtoPage.obterOpcoesSelecionadas();
+		System.out.println(listaOpcoes.get(0));
+		System.out.println("Tamanho da Lista: " + listaOpcoes.size());
+		
+		produtoPage.selecionarCorPreta();
+		
+		produtoPage.alterarQuantidade(2);
 	}
 }
 
