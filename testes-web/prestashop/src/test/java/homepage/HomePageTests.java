@@ -18,6 +18,7 @@ public class HomePageTests extends BaseTests{
 	LoginPage loginPage;
 	ProdutoPage produtoPage;
 	ModalProdutoPage modalProdutoPage;
+	String nomeProduto_ProdutoPage;
 	
 	
 	@Test
@@ -40,7 +41,7 @@ public class HomePageTests extends BaseTests{
 		
 		produtoPage = homePage.clicarProduto(indice);
 		
-		String nomeProduto_ProdutoPage = produtoPage.obterNomeProduto();
+		nomeProduto_ProdutoPage = produtoPage.obterNomeProduto();
 		String precoProduto_ProdutoPage = produtoPage.obterPrecoProduto();
 				
 		assertThat(nomeProduto_HomePage.toUpperCase(), is(nomeProduto_ProdutoPage.toUpperCase()));
@@ -92,12 +93,26 @@ public class HomePageTests extends BaseTests{
 		
 		modalProdutoPage = produtoPage.clicarBotaoAddToCart();
 		
-		//assertThat(modalProdutoPage.obterMensagemProdutoAdicionado(), is("Product successfully added to your shopping cart"));
 		assertTrue(modalProdutoPage.obterMensagemProdutoAdicionado().endsWith("roduct successfully added to your shopping cart"));
 		
-		System.out.println(modalProdutoPage.obterTamanhoProduto());
-		System.out.println(modalProdutoPage.obterCorProduto());
-		System.out.println(modalProdutoPage.obterQuantidadeProduto());
+		assertThat(modalProdutoPage.obterDescricaoProduto().toUpperCase(), is(nomeProduto_ProdutoPage.toUpperCase()));
+		
+		
+		String precoProdutoString = modalProdutoPage.obterPrecoProduto();
+		precoProdutoString = precoProdutoString.replace("$", "");
+		Double precoProduto = Double.parseDouble(precoProdutoString);
+		
+		assertThat(modalProdutoPage.obterTamanhoProduto(), is(tamanhoProduto));
+		assertThat(modalProdutoPage.obterCorProduto(), is(corPreta));
+		assertThat(modalProdutoPage.obterQuantidadeProduto(), is(Integer.toString(quantidadeProduto)));
+		
+		 String subTotalString = modalProdutoPage.obterSubtotal();
+		 subTotalString = subTotalString.replace("$", "");
+		 Double subTotal = Double.parseDouble(subTotalString);
+		 
+		 Double subTotalCalculado = quantidadeProduto * precoProduto;
+		 
+		 assertThat(subTotal, is(subTotalCalculado));
 		
 	}
 }

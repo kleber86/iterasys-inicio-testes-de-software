@@ -16,9 +16,10 @@ public class ModalProdutoPage {
 	}
 
 	private By mensagemProdutoAdicionado = By.id("myModalLabel");
-	private By descricaoProduto = By.className("className");
+	private By descricaoProduto = By.className("product-name");
 	private By precoProduto = By.cssSelector("p.product-price");
 	private By listaValoresInformados = By.cssSelector("div.divide-right .col-md-6:nth-child(2) span strong");
+	private By subTotal = By.cssSelector(".cart-content p:nth-child(2) span.value");
 	
 	public String obterMensagemProdutoAdicionado() {
 		FluentWait wait = new FluentWait(driver).withTimeout(Duration.ofSeconds(5))
@@ -27,6 +28,13 @@ public class ModalProdutoPage {
 		
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(mensagemProdutoAdicionado));
 		return driver.findElement(mensagemProdutoAdicionado).getText();
+	}
+	public String obterDescricaoProduto() {
+		return driver.findElement(descricaoProduto).getText();
+	}
+	
+	public String obterPrecoProduto() {
+		return driver.findElement(precoProduto).getText();
 	}
 	
 	public String obterTamanhoProduto() {
@@ -39,6 +47,10 @@ public class ModalProdutoPage {
 	
 	public String obterQuantidadeProduto() {
 		return driver.findElements(listaValoresInformados).get(2).getText();
+	}
+	
+	public String obterSubtotal() {
+		return driver.findElement(subTotal).getText();
 	}
 
 }
