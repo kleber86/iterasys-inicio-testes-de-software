@@ -6,11 +6,13 @@ import static org.hamcrest.Matchers.is;
 import org.junit.jupiter.api.Test;
 
 import base.BaseTests;
+import pages.HomePage;
 import pages.LoginPage;
 import pages.ProdutoPage;
 
 public class HomePageTests extends BaseTests{
 
+	
 	@Test
 	public void testContarProdutos_oitoProdutosDiferentes() {
 		carregarPaginaInicial();
@@ -51,5 +53,31 @@ public class HomePageTests extends BaseTests{
 		
 		// Validar se o usuario está logado
 		assertThat(homePage.estaLogado("Kleber Nascimento"), is(true));
+		
+		carregarPaginaInicial();
+	}
+	
+	@Test
+	public void incluirProdutoNoCarrinho_ProdutoIncluidoComSucesso() {
+	
+		testLoginComSucesso_UsuarioLogado();
+
+		testValidarDetalhesDoProduto_DescricaoEValorIguais();
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
