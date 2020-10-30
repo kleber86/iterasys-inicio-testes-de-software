@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import base.BaseTests;
 import pages.CarrinhoPage;
+import pages.CheckoutPage;
 import pages.LoginPage;
 import pages.ModalProdutoPage;
 import pages.ProdutoPage;
@@ -132,14 +133,14 @@ public class HomePageTests extends BaseTests{
 	Double esperado_totalTaxIncTotal = esperado_totalTaxExcTotal;
 	Double esperado_taxesTotal = 0.00;
 	
-	
+	CarrinhoPage carrinhoPage;
 	@Test
 	public void irParaCarrinho_InformacoesPersistidas() {
 		// Pré-Condição
 		// Produto incluido na tela ModalProdutoPage
 		incluirProdutoNoCarrinho_ProdutoIncluidoComSucesso();
 		
-		CarrinhoPage carrinhoPage = modalProdutoPage.clicarBotaoProceedToCheckout();
+		carrinhoPage = modalProdutoPage.clicarBotaoProceedToCheckout();
 		
 		// Teste
 		
@@ -174,6 +175,27 @@ public class HomePageTests extends BaseTests{
 		assertThat(Funcoes.removeCifraoDevolveDouble(carrinhoPage.obter_totalTaxExclTotal()), is(esperado_totalTaxExcTotal));
 		assertThat(Funcoes.removeCifraoDevolveDouble(carrinhoPage.obter_totalTaxIncTotal()), is(esperado_totalTaxIncTotal));
 		assertThat(Funcoes.removeCifraoDevolveDouble(carrinhoPage.obter_taxesTotal()), is(esperado_taxesTotal));
+	}
+	
+	CheckoutPage checkoutPage;
+	
+	@Test
+	public void irParaCheckout_FreteMeioPagamentoEnderecoListadosOk() {
+		// Pré condições
+		
+		// Produto disponivel no carrinho de compras
+		irParaCarrinho_InformacoesPersistidas();
+		
+		// Teste
+		
+		// Clicar no botão
+		checkoutPage = carrinhoPage.clicarBotaoProceedToCheckout();
+		
+		// Preencher informações
+		
+		// Validar Informações na tela
+		assertThat(Funcoes.removeCifraoDevolveDouble(checkoutPage.obter_totalTaxIncTotal()), is(esperado_totalTaxIncTotal));
+		
 	}
 }
 
