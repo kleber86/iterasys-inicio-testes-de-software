@@ -23,4 +23,45 @@ public class CarrinhoPage {
 	private By totalTaxExclTotal = By.cssSelector("div.cart-summary-totals div.cart-summary-line:nth-child(1) span.value");
 	private By totalTaxIncTotal = By.cssSelector("div.cart-summary-totals div.cart-summary-line:nth-child(2) span.value");
 	private By taxesTotal = By.cssSelector("div.cart-summary-totals div.cart-summary-line:nth-child(3) span.value");
+
+
+
+	public String obter_nomeProduto() {
+		return driver.findElement(nomeProduto).getText();
+	}
+	
+	public String obter_precoProduto() {
+		return driver.findElement(precoProduto).getText();
+	}
+	
+	public String obter_tamanhoProduto() {
+		return driver.findElement(tamanhoProduto).getText();
+	}
+	public String obter_corProduto() {
+		return driver.findElement(corProduto).getText();
+	}
+	public String obter_inputQuantidadeProduto() {
+		return driver.findElement(inputQuantidadeProduto).getText();
+	}
+	public String obter_subTotalProduto() {
+		return driver.findElement(subTotalProduto).getText();
+	}
+	public String obter_numeroItensTotal() {
+		return driver.findElement(numeroItensTotal).getText();
+	}
+	public String obter_subtotalTotal() {
+		return driver.findElement(subtotalTotal).getText();
+	}
+	public String obter_shippingTotal() {
+		return driver.findElement(shippingTotal).getText();
+	}
+	public String obter_totalTaxExclTotal() {
+		return driver.findElement(totalTaxExclTotal).getText();
+	}
+	public String obter_totalTaxIncTotal() {
+		return driver.findElement(totalTaxIncTotal).getText();
+	}
+	public String obter_taxesTotal() {
+		return driver.findElement(taxesTotal).getText();
+	}
 }
