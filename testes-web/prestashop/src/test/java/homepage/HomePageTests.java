@@ -188,14 +188,8 @@ public class HomePageTests extends BaseTests{
 		// Produto disponivel no carrinho de compras
 		irParaCarrinho_InformacoesPersistidas();
 		
-		// Teste
-		
-		// Clicar no botão
 		checkoutPage = carrinhoPage.clicarBotaoProceedToCheckout();
-		
-		// Preencher informações
-		
-		// Validar Informações na tela
+	
 		assertThat(Funcoes.removeCifraoDevolveDouble(checkoutPage.obter_totalTaxIncTotal()), is(esperado_totalTaxIncTotal));
 		//assertThat(checkoutPage.obter_nomeCliente(), is(esperado_nomeCliente));
 		
@@ -210,7 +204,23 @@ public class HomePageTests extends BaseTests{
 		
 		assertThat(encontrado_shippingValor_Double, is(esperado_shippingTotal));
 		
-		checkoutPage.clicarBotaoContinueAddress();
+		checkoutPage.clicarBotaoContinueShipping();
+		
+		checkoutPage.selecionarRadioPayByCheck();
+		
+		String encontrado_amountPayByCheck = checkoutPage.obter_amountPayByCheck();
+		
+		encontrado_amountPayByCheck = Funcoes.removeTexto(encontrado_amountPayByCheck, " (tax incl.)");
+		
+		Double encontrado_amountPayByCheck_Double = Funcoes
+				.removeCifraoDevolveDouble(encontrado_amountPayByCheck);
+		
+		System.out.println(encontrado_amountPayByCheck_Double);
+		assertThat(encontrado_amountPayByCheck_Double, is(esperado_totalTaxIncTotal));
+		
+		checkoutPage.selecionarCheckboxIAgree();
+		
+		assertTrue(checkoutPage.estaSelecionadoCheckboxIAgree());
 	}
 }
 
