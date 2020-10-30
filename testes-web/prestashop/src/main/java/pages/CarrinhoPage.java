@@ -41,7 +41,7 @@ public class CarrinhoPage {
 		return driver.findElement(corProduto).getText();
 	}
 	public String obter_inputQuantidadeProduto() {
-		return driver.findElement(inputQuantidadeProduto).getText();
+		return driver.findElement(inputQuantidadeProduto).getAttribute("value");
 	}
 	public String obter_subTotalProduto() {
 		return driver.findElement(subTotalProduto).getText();
