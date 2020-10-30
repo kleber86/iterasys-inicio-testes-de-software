@@ -4,7 +4,6 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 
@@ -20,6 +19,7 @@ public class ModalProdutoPage {
 	private By precoProduto = By.cssSelector("p.product-price");
 	private By listaValoresInformados = By.cssSelector("div.divide-right .col-md-6:nth-child(2) span strong");
 	private By subTotal = By.cssSelector(".cart-content p:nth-child(2) span.value");
+	private By botaoProceedToCheckout = By.cssSelector(".cart-content-btn a");
 	
 	public String obterMensagemProdutoAdicionado() {
 		FluentWait wait = new FluentWait(driver).withTimeout(Duration.ofSeconds(5))
@@ -51,6 +51,10 @@ public class ModalProdutoPage {
 	
 	public String obterSubtotal() {
 		return driver.findElement(subTotal).getText();
+	}
+	public CarrinhoPage clicarBotaoProceedToCheckout() {
+		driver.findElement(botaoProceedToCheckout).click();
+		return new CarrinhoPage(driver);
 	}
 
 }

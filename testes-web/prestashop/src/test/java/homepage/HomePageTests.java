@@ -9,6 +9,7 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 import base.BaseTests;
+import pages.CarrinhoPage;
 import pages.LoginPage;
 import pages.ModalProdutoPage;
 import pages.ProdutoPage;
@@ -113,7 +114,15 @@ public class HomePageTests extends BaseTests{
 		 Double subTotalCalculado = quantidadeProduto * precoProduto;
 		 
 		 assertThat(subTotal, is(subTotalCalculado));
+	}
+	
+	@Test
+	public void irParaCarrinho_InformacoesPersistidas() {
+		// Pré-Condição
+		// Produto incluido na tela ModalProdutoPage
+		incluirProdutoNoCarrinho_ProdutoIncluidoComSucesso();
 		
+		CarrinhoPage carrinhoPage = modalProdutoPage.clicarBotaoProceedToCheckout();
 	}
 }
 
