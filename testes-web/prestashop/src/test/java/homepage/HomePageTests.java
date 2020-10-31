@@ -231,6 +231,11 @@ public class HomePageTests extends BaseTests{
 		PedidoPage pedidoPage = checkoutPage.clicar_botaoConfirmaPedido();
 		
 		assertTrue(pedidoPage.obter_textoPedidoConfirmado().endsWith("YOUR ORDER IS CONFIRMED"));
+		
+		assertThat(pedidoPage.obter_email(), is("klebernascimento@outlook.com.br"));
+		assertThat(pedidoPage.obter_totalProdutos(), is(esperado_subTotalProduto));
+		assertThat(pedidoPage.obter_totalTaxIncl(), is(esperado_totalTaxIncTotal));
+		assertThat(pedidoPage.obter_metodoPagemento(), is("check"));
 	}
 }
 
