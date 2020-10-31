@@ -1,0 +1,3 @@
+nomeTeste;e-mail;password;nomeUsuario;resultado
+lognValido;klebernascimento@outlook.com.br;123456;Kleber Nascimento;positivo
+lognInvalido;klebernascimento@outlook.com.br;000000;Kleber Nascimento;negativo

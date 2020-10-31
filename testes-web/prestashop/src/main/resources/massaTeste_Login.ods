@@ -1,0 +1,3 @@
+nomeTeste,e-mail,password,resultado
+lognValido,klebernascimento@ouytlook.com.br,123456,positivo
+loginInvalido,klebernascimento@ouytlook.com.br,654321,negativo

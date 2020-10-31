@@ -22,7 +22,8 @@ public class HomePage {
 	private By descricosDosProdutos = By.cssSelector(".product-description a");
 	private By precoDosProdutos = By.cssSelector(".product-price-and-shipping .price");
 	private By botaoSignIn = By.cssSelector(".user-info span");
-	private By usuarioLogado = By.cssSelector(".account span");
+	private By usuarioLogado = By.cssSelector("#_desktop_user_info span.hidden-sm-down");
+	private By botaoSignOut = By.cssSelector("a.logout");
 	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -68,6 +69,10 @@ public class HomePage {
 	
 	public boolean estaLogado(String texto) {
 		return texto.contentEquals(driver.findElement(usuarioLogado).getText());
+	}
+	
+	public void clicarBotaoSignOut() {
+		driver.findElement(botaoSignOut).click();
 	}
 	
 
