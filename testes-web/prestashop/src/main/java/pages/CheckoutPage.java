@@ -20,6 +20,7 @@ public class CheckoutPage {
 	private By amountPayByCheck = By
 	.cssSelector("#payment-option-1-additional-information > section > dl > dd:nth-child(2)");
 	private By checkboxIAgree = By.id("conditions_to_approve[terms-and-conditions]");
+	private By botaoConfirmaPedido = By.cssSelector("#payment-confirmation button");
 
 	public String obter_totalTaxIncTotal(){
 		return driver.findElement(totalTaxIncTotal).getText();
@@ -53,6 +54,11 @@ public class CheckoutPage {
 	}
 	public boolean estaSelecionadoCheckboxIAgree() {
 		return driver.findElement(checkboxIAgree).isSelected();
+	}
+	
+	public PedidoPage clicar_botaoConfirmaPedido() {
+		driver.findElement(botaoConfirmaPedido).click();
+		return new PedidoPage(driver);
 	}
 	
 }

@@ -13,6 +13,7 @@ import pages.CarrinhoPage;
 import pages.CheckoutPage;
 import pages.LoginPage;
 import pages.ModalProdutoPage;
+import pages.PedidoPage;
 import pages.ProdutoPage;
 import util.Funcoes;
 
@@ -221,6 +222,15 @@ public class HomePageTests extends BaseTests{
 		checkoutPage.selecionarCheckboxIAgree();
 		
 		assertTrue(checkoutPage.estaSelecionadoCheckboxIAgree());
+	}
+	
+	@Test
+	public void finalizarPedido_pedidoFinalizadoComSucesso() {
+		irParaCheckout_FreteMeioPagamentoEnderecoListadosOk();
+		
+		PedidoPage pedidoPage = checkoutPage.clicar_botaoConfirmaPedido();
+		
+		assertTrue(pedidoPage.obter_textoPedidoConfirmado().endsWith("YOUR ORDER IS CONFIRMED"));
 	}
 }
 
