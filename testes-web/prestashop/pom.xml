@@ -8,6 +8,9 @@
   	<junit.version>5.6.2</junit.version>
   	<hamcrest.version>2.2</hamcrest.version>
   	<selenium-java.version>3.141.59</selenium-java.version>
+  	<cucumber.version>6.1.2</cucumber.version>
+  
+
   </properties>
   
   <dependencies>
@@ -31,6 +34,23 @@
 	    <artifactId>selenium-java</artifactId>
 	    <version>${selenium-java.version}</version>
 	</dependency>
+	  	
+	  <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+	<dependency>
+	    <groupId>io.cucumber</groupId>
+	    <artifactId>cucumber-java</artifactId>
+	    <version>${cucumber.version}</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+	<dependency>
+	    <groupId>io.cucumber</groupId>
+	    <artifactId>cucumber-junit</artifactId>
+	    <version>${cucumber.version}</version>
+	    <scope>test</scope>
+	</dependency>
+
+
 	  	
   </dependencies>
 </project>
