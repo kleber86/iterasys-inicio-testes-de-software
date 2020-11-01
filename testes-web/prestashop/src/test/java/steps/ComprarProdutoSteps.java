@@ -4,14 +4,21 @@ package steps;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.google.common.io.Files;
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
@@ -140,10 +147,24 @@ public class ComprarProdutoSteps {
 	    assertThat(subtotalEncontrado, is(subtotalCalculadoEsperado));
 	}
 
+	@After(order = 1)
+	public void capturarTela(Scenario scenario) {
+		TakesScreenshot camera = (TakesScreenshot) driver;
+		File capturaDeTela = camera.getScreenshotAs(OutputType.FILE);
+		
+		String scenarioID = scenario.getId().substring(scenario.getId().lastIndexOf(".feature:") + 9);
+		String nomeArquivo = "resources/screenshots/" + scenario.getName() + "_" + scenarioID + "_" + scenario.getStatus() + ".png";
+		System.out.println("ID: "+scenario.getId());
+		try {
+			Files.move(capturaDeTela, new File(nomeArquivo));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 
-
-	@After
+	@After(order = 0)
 	public static void finalizar() {
 		driver.quit();
 	}
