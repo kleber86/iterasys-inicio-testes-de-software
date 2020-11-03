@@ -113,6 +113,7 @@
 - [ ] Conteudo não completo
 
 <h3>7. Testes Web</h3>
+
 - [x] Tipos de Aplicações Web
 - [x] Obama e o Teste A/B
 - [x] Planejamento e Análise para Testes Web
