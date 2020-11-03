@@ -100,3 +100,57 @@
 - [x] Análise da Cauda Longa
 - [x] Exemplo de Uso de Pairwise na Cauda Longa (PICT Online)
 
+<h3>5. Análise, Modelagem e Implementação</h3>
+- [ ] Conteudo não completo
+
+<h3>6. Massa de Teste</h3>
+- [ ] Conteudo não completo
+
+<h3>7. Testes de Serviços</h3>
+- [ ] Conteudo não completo
+
+<h3>8. Testes Manuais e Exploratórios</h3>
+- [ ] Conteudo não completo
+
+<h3>7. Testes Web</h3>
+- [x] Tipos de Aplicações Web
+- [x] Obama e o Teste A/B
+- [x] Planejamento e Análise para Testes Web
+- [x] O que é Java
+- [x] Instalar o Java (Open JDK)
+- [x] O que é o Eclipse IDE
+- [x] Instalar o Eclipse IDE
+- [x] Instalar o Chrome Browser
+- [x] Instalar o Chrome Driver
+- [x] Criação de um Script de Teste com Maven e Selenium
+- [x] Confirmar que o Carrinho de Compras está Vazio
+- [x] Testar o Fluxo Padrão - Parte 1
+- [x] Testar Login
+- [x] Testar o Fluxo Padrão - Parte 2
+- [x] Testar o Fluxo Padrão - Parte 3
+- [x] Teste do Fluxo Padrão - Parte 4
+- [x] Testar o Fluxo Padrão - Parte 5
+- [x] Testar o Fluxo Padrão - Parte 6
+- [x] Testar o Fluxo Padrão - Parte 7
+- [x] Testar Ir para o Carrinho - Parte 1
+- [x] Testar Ir para o Carrinho - Parte 2
+- [x] Testar Ir para o Carrinho - Parte 3
+- [x] Testar Ir para o Carrinho - Parte 5
+- [x] Ir Para Check Out - Parte 1
+- [x] Ir Para Check Out - Parte 2
+- [x] Ir Para Check Out - Parte 3
+- [x] Finalizar Pedido - Parte 1
+- [x] Finalizar Pedido - Parte 2
+- [x] Solução de Problemas: Sincronismo
+- [x] Solução de Problemas - Programação Exótica
+- [x] Uso de Massa em Testes Web
+- [x] Evidência e Registro de Defeitos em Testes Web
+- [x] Cucumber: Definição e Ambiente
+- [x] Cucumber: Visualizar Produto
+- [x] Cucumber: Massa
+- [x] Cucumber: Evidências
+- [x] Cucumber: Relatórios
+- [x] QArentena - 20 - Localizando Elementos via CSS e XPath - com Danilo Freitas
+
+<h3>7. Testes Mobile</h3>
+- [ ] Conteudo não completo
